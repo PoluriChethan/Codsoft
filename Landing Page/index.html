@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Games Website</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <a href="">CRAZY GAMES</a>
+            </div>
+            <ul class="navbar">
+                <li><a href="">Home</a></li>
+                <li><a href="">Free Games</a></li>
+                <li><a href="">Play Online</a></li>
+                <li><a href="">Paid Games</a></li>
+            </ul>
+            <div class="toggle" onclick="toggleMenu();"><i class="fas fa-bars"></i></div>
+        </header>
+        <div class="content">
+            <div class="article">
+                <h1>Game Zone</h1>
+                <p>If you want to spend your time in Games for free.<br>So Download and Enjoy.</p>
+                <input type="text" placeholder="Search for Games"><br>
+                <button type="button"><span></span>Download Games</button>
+                <button type="button "><span></span>Play Online</button>
+                <div class="social">
+                    <a href=""><i class="fab fa-facebook f"></i></a>
+                    <a href=""><i class="fab fa-instagram "></i></a>
+                    <a href=""><i class="fab fa-twitter "></i></a>
+                    <a href=""><i class="fab fa-youtube "></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
