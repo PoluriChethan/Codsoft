@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', serif;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("game.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header{
+    min-height: 15px;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a{
+    font-size: 45px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: serif;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    padding: 20px 15px;
+}
+header ul li a{
+    color: #fff;
+    text-decoration:  none;
+    font-size: 20px;
+    font-family: serif;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    filter: drop-shadow(2px 2px 4px transparent);
+}
+header ul li a:after{
+
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #167bc7;
+    position: absolute;
+    left: 0; 
+    bottom: 10px;
+    transition: 0.5s ;
+}
+header ul li a:hover:after{
+    width: 100%;
+}
+header .toggle{
+    font-size: 30px;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+.content{
+    min-height: 85vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+.article h1{
+    color: #fff;
+    font-size: 65px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-weight: 400;
+    font-family: serif;
+}
+.article p{
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+.content button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #167bc7;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.content span{
+    background: #167bc7;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+.article .social{
+    margin-top: 25px;
+}
+.article .social a{
+    color:#fff;
+    text-decoration: none;
+    padding: 0px 8px;
+    font-size: 28px;
+}
+.article .social a:hover{
+    color: #167bc7;
+    transition: 0.5s ease;
+}
+input[type="text"]{
+    width: 500px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-family: sans-serif;
+    margin-top: #dedede;
+    border-bottom:  solid;
+    border: 2px solid #000;
+    border-radius: 25px;
+    text-align: center;
+}
+@media screen and (max-width: 900px){
+    .wrapper{
+        padding: 0px;
+        width: 100%;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        padding: 20px 20px;
+    }
+    header .logo a{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    header ul{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    header ul li{
+        padding: 12px 0px;
+    }
+    header ul li a{
+        font-size: 20px;
+    }
+    header .toggle{
+        display: flex;
+        z-index: 1;
+    }
+    .content{
+        width: 100%;
+        padding: 0px 20px;
+    }
+    .article h1{
+        font-size: 55px;
+    }
+    .article p{
+        font-size: 16px;
+    }
+    .article .button{
+     padding: 10px 28px;
+     font-size: 17px;   
+    }
+    .article .social a{
+        font-size: 23px;
+    }
+    header ul.navbar.active{
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: #222;
+    }
+}
